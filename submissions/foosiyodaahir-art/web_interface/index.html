@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartGuard AI</title>
+    <style>
+        :root {
+            --primary-blue: #3b82f6;
+            --bg-dark: #1e293b;
+            --card-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            display: flex;
+            background: white;
+            width: 1000px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 650px;
+        }
+
+        .form-section {
+            flex: 1.6;
+            padding: 40px;
+        }
+
+        .header-blue {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .grid-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+
+        .btn-predict {
+            grid-column: span 2;
+            background: var(--primary-blue);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .btn-predict:hover { background: #1d4ed8; }
+
+        .result-section {
+            flex: 1;
+            background: #eff6ff;
+            padding: 40px;
+            border-left: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .result-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .risk-box { background: #fee2e2; color: #991b1b; padding: 20px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #f87171; }
+        .healthy-box { background: #dcfce7; color: #166534; padding: 20px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="form-section">
+            <div class="header-blue">
+                <h1 style="margin:0">HeartGuard AI</h1>
+                <p style="margin:5px 0 0; font-size: 0.9rem; opacity: 0.9;">
+Medical-grade Heart Disease Prediction</p>
+            </div>
+
+            <form action="/predict" method="post" class="grid-inputs">
+                <div class="input-group">
+                    <label>Age (Years)</label>
+                    <input type="number" name="age" required>
+                </div>
+                <div class="input-group">
+                    <label>Height (cm)</label>
+                    <input type="number" name="height" required>
+                </div>
+                <div class="input-group">
+                    <label>Weight (kg)</label>
+                    <input type="number" name="weight" required>
+                </div>
+                <div class="input-group">
+                    <label>Systolic BP (ap_hi)</label>
+                    <input type="number" name="ap_hi" required>
+                </div>
+                <div class="input-group">
+                    <label>Diastolic BP (ap_lo)</label>
+                    <input type="number" name="ap_lo" required>
+                </div>
+                <div class="input-group">
+                    <label>Gender</label>
+                    <select name="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Cholesterol</label>
+                    <select name="cholesterol" required>
+                        <option value="" disabled selected>Select Level</option>
+                        <option value="1">Normal</option>
+                        <option value="2">Above Normal</option>
+                        <option value="3">Well Above Normal</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Glucose</label>
+                    <select name="gluc" required>
+                        <option value="" disabled selected>Select Level</option>
+                        <option value="1">Normal</option>
+                        <option value="2">Above Normal</option>
+                        <option value="3">Well Above Normal</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Smoking Status</label>
+                    <select name="smoke" required>
+                        <option value="" disabled selected>Select Status</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Physical Activity</label>
+                    <select name="active" required>
+                        <option value="" disabled selected>Select Status</option>
+                        <option value="1">Active</option>
+                        <option value="0">Inactive</option>
+                    </select>
+                </div>
+                <div class="input-group" style="grid-column: span 2;">
+                    <label>Algorithm Selection</label>
+                    <select name="model_type" required>
+                        <option value="rf">Random Forest</option>
+                        <option value="lr">Logistic Regression</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-predict">Analyze Health Data</button>
+            </form>
+        </div>
+
+        <div class="result-section">
+            <div class="result-card">
+                <p style="color: #64748b; font-weight: bold; margin-bottom: 20px;">Analysis Result</p>
+                
+                {% if results %}
+                    <div class="{{ results.rec_class }}">
+                        <h2 style="margin: 0; font-size: 1.4rem;">
+                            {{ "High Risk" if "High Risk" in results.recommendation else "Healthy" }}
+                        </h2>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #475569; line-height: 1.5; margin-top: 15px;">
+                        {{ results.recommendation }}
+                    </p>
+                {% else %}
+                    <h2 style="color: #cbd5e1; margin: 0;">Awaiting Data...</h2>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 10px;">Please fill the form to get assessment.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
