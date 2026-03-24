@@ -1,0 +1,9 @@
+# === requirements.txt for Car Dataset Preprocessing ===
+# pandas: used for reading CSVs, handling missing values, one-hot encoding, and general data manipulation
+pandas==2.2.3
+
+# numpy: used for numerical operations, e.g., log1p, calculations, safe divisions
+numpy==1.26.5
+
+# scikit-learn: used for StandardScaler to standardize numeric features
+scikit-learn==1.3.2

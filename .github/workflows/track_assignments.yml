@@ -1,0 +1,38 @@
+name: Student Assignment Tracker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  track:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run tracker script
+        run: python tracker.py
+
+      - name: Upload Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: assignment-tracker-reports
+          path: |
+            TRACKER.md
+            TRACKER.csv
+          retention-days: 7

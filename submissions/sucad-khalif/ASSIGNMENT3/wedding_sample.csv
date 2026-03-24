@@ -1,0 +1,51 @@
+Number_of_Guests,Venue_Type,Catering_Type,Decoration_Level,Wedding_Duration_Hours,Wedding_Price
+200.0,Hotel,Standard,High,7.0,5000.0
+400.0,Hotel,Standard,Medium,17.0,5400.0
+400.0,Hotel,Premium,High,9.0,4000.0
+50.0,Event Hall,Standard,Medium,4.0,2000.0
+200.0,Event Hall,Premium,Medium,9.0,3000.0
+200.0,Home,Standard,Medium,5.0,5000.0
+120.0,Hotel,Standard,Medium,2.0,2000.0
+600.0,Hotel,Standard,High,12.0,6000.0
+100.0,Hotel,Premium,Medium,5.0,5000.0
+500.0,Hotel,Standard,Medium,8.0,5000.0
+300.0,Home,Basic,Medium,6.0,1500.0
+400.0,Event Hall,Basic,Medium,8.0,2800.0
+500.0,Event Hall,Standard,Medium,8.0,3500.0
+400.0,Home,Standard,Medium,6.0,2000.0
+500.0,Home,Standard,Medium,6.0,2500.0
+600.0,Hotel,Standard,Medium,8.0,6000.0
+400.0,Hotel,Standard,Medium,8.0,4000.0
+500.0,Event Hall,Standard,Medium,6.0,3000.0
+500.0,Home,Basic,Low,6.0,2000.0
+500.0,Hotel,Premium,High,8.0,7500.0
+600.0,Hotel,Premium,High,8.0,9000.0
+600.0,Event Hall,Premium,High,7.0,5400.0
+400.0,Home,Premium,High,6.0,3200.0
+400.0,Event Hall,Premium,High,7.0,3200.0
+,Event Hall,,Medium,,6000.0
+,Home,,Medium,,
+,,,,7.0,
+,Hotel,Standard,,,
+50.0,,Standard,,7.0,
+,Home,Standard,,,2500.0
+,,,Medium,24.0,
+,,Basic,Medium,,
+799.0,Hotel,,,,
+,,,,,10000.0
+699.0,Home,Basic,Medium,,
+,,,Medium,8.0,699.0
+,Home,Standard,Low,,
+69.0,Event Hall,Standard,Medium,6.0,
+,,,Medium,,6999.0
+200.0,Home,,,,
+200.0,,,,5.0,5000.0
+,Home,Basic,Low,,
+299.0,Hotel,Premium,,,2799.0
+,,,,5.0,2500.0
+400.0,Home,,,,3000.0
+,,,,7.0,6000.0
+500.0,Home,,,,5000.0
+300.0,,Basic,Medium,,
+,,,,5.0,7000.0
+,Home,Standard,Low,,

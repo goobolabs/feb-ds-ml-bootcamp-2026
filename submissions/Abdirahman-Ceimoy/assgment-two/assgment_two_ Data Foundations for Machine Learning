@@ -1,0 +1,59 @@
+Title
+
+Customer Loyalty Prediction in a Local Grocery Store in Yaqshid District
+
+1. Introduction and Data Collection
+
+For this assignment, I collected my own dataset from a small grocery store located in Yaqshid district. The goal of this dataset is to understand what factors influence whether a customer is likely to return to the store in the following month.
+
+I collected the data by asking customers short questions after they completed their purchases. Participation was voluntary. In total, I gathered responses from 56 customers over a period of five days.
+
+The questions focused on customer demographics, purchasing behavior, and satisfaction level. The final question asked whether they expect to shop at the same store again next month.
+
+2. Description of Features and Label
+
+The dataset contains the following features:
+
+Age, numerical variable representing the customer’s age.
+
+Gender, categorical variable with two values, Male or Female.
+
+Income Level, categorical variable with three levels, Low, Medium, High.
+
+Purchase Frequency, numerical variable representing how many times per month the customer shops at the store.
+
+Average Spending per Visit, numerical variable in USD.
+
+Satisfaction Rating, numerical scale from 1 to 5.
+
+The label variable is:
+
+Will Return Next Month, binary variable with values Yes or No.
+
+This is a classification problem because the target variable has two categories.
+
+3. Dataset Structure
+
+The dataset contains 56 rows and 7 columns. Each row represents one customer.
+
+The dataset includes both numerical and categorical variables. Some values are self-reported, especially satisfaction and income level.
+
+4. Data Quality Issues
+
+During data collection, several issues were observed:
+
+A few customers did not want to provide income information.
+
+Some satisfaction ratings were inconsistent.
+
+There is a slight imbalance in the target variable, since more customers responded “Yes” than “No”.
+
+Because the data was collected manually, minor entry errors are possible.
+
+These issues make the dataset realistic and suitable for preprocessing and cleaning.
+
+5. Use Case in Machine Learning
+
+This dataset can be used to build a classification model that predicts customer loyalty. The business can use such a model to identify customers who are less likely to return and improve customer retention strategies.
+
+Possible algorithms include Logistic Regression, Decision Tree, and Random Forest.

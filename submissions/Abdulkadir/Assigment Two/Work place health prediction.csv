@@ -1,0 +1,29 @@
+Age,Gender,Weight (kg),Exercise-Type,Average Weekly exercise days,How you travel to and from work,Total daily sleep (hours),Diet type,Stress level,Health Status
+25,Male,75,Walking,4,Bus,7,,Heigh,At Risk
+30,Male,40,GYM,5,Walk,30,Mixed,Low,Healthy
+25,Male,62,Walking,5,Car,6,Mixed,Low,Healthy
+29,Male,67,None,2,Bus,7,Traditional,Heigh,At Risk
+23,Male,65,GYM,7,Car,8,Mixed,Moderate / Normal,Healthy
+21,Female,60,GYM,4,Bus,8,Mixed,Heigh,At Risk
+24,Male,58,Foot ball,3,Bus,9,Mixed,Low,Healthy
+21,Female,52,Walking,4,Car,2,Healthy,Low,At Risk
+25,Male,45,Walking,1,Car,4,Traditional,Heigh,At Risk
+22,Female,53,Walking,3,Bus,5,Traditional,Moderate / Normal,At Risk
+21,Male,47,Foot ball,4,MotorCycle,9,Healthy,Low,Healthy
+23,Female,70,Walking,3,Bus,8,Mixed,Low,Healthy
+33,Male,74,Walking,1,MotorCycle,7,Traditional,Moderate / Normal,At Risk
+24,Female,55,GYM,3,MotorCycle,8,Healthy,Moderate / Normal,Healthy
+23,Female,61,Walking,3,Bus,6,Mixed,Moderate / Normal,Healthy
+22,Female,56,Walking,7,Walk,8,Healthy,Low,Healthy
+22,Female,57,None,3,Walk,6,Healthy,Low,At Risk
+22,Male,58,Foot ball,1,Car,7,Mixed,Low,At Risk
+22,Male,58,GYM,5,MotorCycle,6,Mixed,Moderate / Normal,Healthy
+23,Male,72,GYM,5,Walk,6,Mixed,Low,Healthy
+23,Male,68,GYM,5,Bus,6,Mixed,Low,Healthy
+22,Female,45,Walking,7,Car,8,Healthy,Moderate / Normal,Healthy
+22,Male,64,Foot ball,6,Car,6,Traditional,Low,At Risk
+41,Male,85,Walking,4,Bicycle,7,Mixed,Low,Healthy
+25,Male,55,Foot ball,2,Bus,6,Traditional,Moderate / Normal,At Risk
+25,Female,60,None,2,MotorCycle,3,Can buulo qamadii,Low,At Risk
+23,Female,56,Walking,1,Bus,7,Healthy,Heigh,At Risk
+26,Male,62,Foot ball,4,Bus,7,Mixed,Moderate / Normal,Healthy

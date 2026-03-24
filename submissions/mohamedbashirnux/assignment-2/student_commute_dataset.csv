@@ -1,0 +1,51 @@
+Transportation_Mode,Departure_Time,Traffic_Level,Distance_km,Weather,Travel_Time_Minutes
+Private Car,7:00,High,5,Sunny,25
+Bus,7:30,High,8,Rainy,35
+Walking,7:45,Low,2,Sunny,20
+Motorbike,8:00,Medium,6,Cloudy,15
+Private Car,7:15,Medium,7,Sunny,20
+Bus,7:00,Low,10,Sunny,25
+Walking,8:00,Low,1.5,Cloudy,15
+Motorbike,7:30,High,8,Rainy,22
+Private Car,7:45,High,6,Rainy,30
+Bus,8:15,Medium,9,Sunny,28
+Walking,7:30,Low,2.5,Sunny,25
+Motorbike,7:00,Low,5,Cloudy,12
+Private Car,8:00,High,8,Rainy,35
+Bus,7:15,Medium,7,Cloudy,22
+Walking,7:00,Low,1,Sunny,12
+Motorbike,7:45,High,7,Rainy,20
+Private Car,7:30,Medium,5,Sunny,18
+Bus,8:00,High,10,Rainy,40
+Walking,8:15,Low,2,Cloudy,18
+Motorbike,7:15,Medium,6,Sunny,14
+Private Car,7:00,Low,4,Sunny,15
+Bus,7:45,High,9,Rainy,38
+Walking,7:30,Low,1.8,Sunny,18
+Motorbike,8:00,High,8,Cloudy,25
+Private Car,7:15,High,7,Rainy,32
+Bus,7:00,Medium,8,Sunny,24
+Walking,8:00,Low,2.2,Cloudy,22
+Motorbike,7:30,Low,5,Sunny,11
+Private Car,7:45,Medium,6,Cloudy,22
+Bus,8:15,High,11,Rainy,42
+Walking,7:15,Low,1.5,Sunny,15
+Motorbike,7:00,Medium,7,Cloudy,16
+Private Car,8:00,High,9,Rainy,38
+Bus,7:30,Medium,8,Sunny,26
+Walking,7:45,Low,2,Cloudy,20
+Motorbike,7:15,High,6,Rainy,18
+Private Car,7:00,Medium,5,Sunny,17
+Bus,8:00,High,10,Rainy,40
+Walking,7:30,Low,1.7,Sunny,17
+Motorbike,7:45,Low,5,Cloudy,13
+Private Car,7:15,High,8,Rainy,35
+Bus,7:00,Low,7,Sunny,20
+Walking,8:15,Low,2.5,Cloudy,25
+Motorbike,7:30,Medium,6,Sunny,15
+Private Car,8:00,High,7,Rainy,33
+Bus,7:45,Medium,9,Cloudy,30
+Walking,7:00,Low,1.2,Sunny,13
+Motorbike,7:15,High,8,Rainy,23
+Private Car,7:30,Low,4,Sunny,14
+Bus,8:00,High,12,Rainy,45

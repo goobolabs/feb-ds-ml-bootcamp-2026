@@ -1,0 +1,110 @@
+Distance,Transport Mode,Departure Time,Traffic,Sleep Hours,Productivity
+12,Bus,,High,6,Low
+3,Walking,7.45,Low,8,High
+25,Private Car,6.30,Medium,7,High
+15,?,7.00,High,5,Low
+5,Motorbike,8.00,Medium,6,High
+10,Bus,7.30,High,,Low
+20,Private Car,7.10,High,4,Low
+2,Walking,8.15,Low,7,High
+18,Bus,6.45,Medium,6,Low
+8,Motorbike,7.50,Low,8,High
+30,Bus,6.00,High,5,Low
+1,Walking,8.30,Low,0,High
+22,Car,6.45,Medium,6,Low
+14,Bus,7.00,High,5,Low
+6,Motorbike,7.55,Low,7,High
+12,Bus,7.15,High,,Low
+4,Walking,8.00,Low,8,High
+28,Private Car,,High,5,Low
+11,Bus,7.20,Medium,7,High
+9,Motorbike,7.45,Low,8,High
+35,Bus,5.45,High,4,Low
+2,Walking,8.20,Low,7,High
+16,Private Car,7.00,Medium,6,High
+19,Bus,6.50,High,5,Low
+7,Motorbike,7.40,Low,8,High
+13,Bus,7.10,High,,Low
+24,Car,6.30,High,5,Low
+3,Walking,8.00,Low,8,High
+17,Bus,6.55,Medium,6,Low
+5,Motorbike,8.10,Low,7,High
+40,Bus,5.30,High,4,Low
+1,Walking,8.45,Low,9,High
+21,Private Car,6.50,Medium,6,High
+15,Bus,7.15,High,5,Low
+8,Motorbike,7.35,Low,7,High
+10,Bus,7.25,High,,Low
+26,Car,6.20,High,4,Low
+4,Walking,8.10,Low,8,High
+14,Bus,7.05,Medium,6,Low
+6,Motorbike,7.50,Low,7,High
+33,Bus,5.50,High,5,Low
+2,Walking,8.25,Low,8,High
+20,Private Car,7.05,Medium,6,High
+18,Bus,6.40,High,4,Low
+9,Motorbike,7.45,Low,7,High
+12,Bus,7.10,High,,Low
+23,Car,6.40,High,5,Low
+5,Walking,7.55,Low,8,High
+16,Bus,7.00,Medium,6,Low
+7,Motorbike,8.05,Low,7,High
+38,Bus,5.40,High,4,Low
+2,Walking,8.30,Low,9,High
+22,Private Car,6.55,Medium,7,High
+15,Bus,7.20,High,5,Low
+8,Motorbike,7.40,Low,8,High
+11,Bus,7.15,High,,Low
+27,Car,6.15,High,4,Low
+3,Walking,8.20,Low,8,High
+13,Bus,7.05,Medium,6,Low
+6,Motorbike,7.55,Low,7,High
+31,Bus,6.00,High,5,Low
+1,Walking,8.40,Low,9,High
+19,Private Car,7.10,Medium,6,High
+17,Bus,6.50,High,4,Low
+10,Motorbike,7.30,Low,8,High
+12,Bus,7.20,High,,Low
+25,Car,6.25,High,5,Low
+4,Walking,8.15,Low,7,High
+14,Bus,7.00,Medium,6,Low
+7,Motorbike,7.50,Low,8,High
+36,Bus,5.45,High,4,Low
+2,Walking,8.25,Low,8,High
+24,Private Car,6.45,Medium,7,High
+16,Bus,7.10,High,5,Low
+9,Motorbike,7.40,Low,7,High
+11,Bus,7.30,High,,Low
+28,Car,6.10,High,4,Low
+3,Walking,8.35,Low,9,High
+15,Bus,6.55,Medium,6,Low
+5,Motorbike,8.00,Low,8,High
+34,Bus,5.55,High,5,Low
+2,Walking,8.45,Low,8,High
+20,Private Car,7.00,Medium,6,High
+18,Bus,6.50,High,4,Low
+8,Motorbike,7.35,Low,7,High
+12,Bus,7.15,High,,Low
+22,Car,6.35,High,5,Low
+4,Walking,8.20,Low,8,High
+14,Bus,7.05,Medium,6,Low
+7,Motorbike,7.55,Low,8,High
+39,Bus,5.35,High,4,Low
+2,Walking,8.30,Low,9,High
+21,Private Car,6.50,Medium,7,High
+15,Bus,7.25,High,5,Low
+9,Motorbike,7.45,Low,7,High
+10,Bus,7.20,High,,Low
+26,Car,6.20,High,4,Low
+3,Walking,8.15,Low,8,High
+13,Bus,7.10,Medium,6,Low
+6,Motorbike,7.50,Low,8,High
+32,Bus,6.05,High,5,Low
+1,Walking,8.40,Low,9,High
+19,Private Car,7.15,Medium,6,High
+17,Bus,6.45,High,4,Low
+8,Motorbike,7.40,Low,7,High
+11,Bus,7.25,High,,Low
+24,Car,6.30,High,5,Low
+4,Walking,8.25,Low,8,High
+14,Bus,7.00,Medium,6,Low

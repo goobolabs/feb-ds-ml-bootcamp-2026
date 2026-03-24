@@ -1,0 +1,4 @@
+pandas==2.1.1 = data loading, cleaning, encoding, feature engineering, I/O
+numpy==1.26.2 = numeric operations, log transformation, array computations
+scikit-learn==1.3.0 = StandardScaler for feature scaling (and optional predictive imputation)
+python-dateutil = handling dates if needed for CarAge calculations

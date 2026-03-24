@@ -1,0 +1,65 @@
+Mobile Phone Usage Patterns and Their Impact on Student Productivity
+
+1. Collection Method
+
+This dataset was collected through a structured survey conducted among 50 university students. The purpose of this study was to examine how mobile phone usage behavior affects student productivity levels.
+
+The data was gathered using a self-designed questionnaire distributed via Google Forms and through direct interviews. Students were asked questions about their daily screen time, social media usage, sleep patterns, and internet access type. They also rated their productivity level as Low, Medium, or High.
+
+All data was manually entered into Microsoft Excel. No external datasets such as Kaggle or UCI were used. This dataset was independently created for academic purposes.
+
+2. Description of Features (X) and Label (y)
+
+The dataset contains 6 columns and 50 rows.
+
+Features (X – Input Variables)
+
+Age – Student age (18–25 years)
+
+Daily_Screen_Time_Hours – Total hours spent on phone daily
+
+Social_Media_Hours – Hours spent on social media
+
+Internet_Type – WiFi, Mobile Data, or Both
+
+Sleep_Hours – Average sleep hours per night
+
+Label (y – Output Variable)
+
+Productivity_Level – Low, Medium, or High
+
+The goal is to predict productivity level based on phone usage behavior.
+
+3. Dataset Structure
+
+Rows: 50
+
+Columns: 6
+
+Data Type: Mixed (Numeric and Categorical)
+
+4. Data Quality Issues
+
+Since the data was collected manually, several issues exist:
+
+Some students estimated screen time (not exact values)
+
+Minor inconsistencies in internet type spelling (wifi, WiFi)
+
+Self-reported productivity may introduce bias
+
+Slight class imbalance (more Medium responses)
+
+These issues require preprocessing such as cleaning, encoding, and scaling.
+
+5. Machine Learning Use Case
+
+This dataset can be used for:
+
+Classification (Predict productivity level)
+
+Clustering (Group students by behavior)
+
+Feature importance analysis (Analyze impact of sleep and screen time).
+
+This dataset is suitable for supervised machine learning tasks.

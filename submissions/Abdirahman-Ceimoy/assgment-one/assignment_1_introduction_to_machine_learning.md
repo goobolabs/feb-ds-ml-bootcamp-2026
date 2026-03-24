@@ -7,7 +7,6 @@ Machine Learning (ML) is a field of Artificial Intelligence that enables compute
 ### Real-Life Example: Email Spam Detection
 Email services use machine learning to detect spam messages. When users mark emails as “spam” or “not spam,” the system learns from these examples. Over time, it identifies patterns such as suspicious words, links, or sender behavior and automatically classifies new emails. The system improves as it processes more data.
 
----
 
 ## 2. Supervised Learning vs Unsupervised Learning
 
@@ -28,7 +27,6 @@ House price prediction is a supervised learning task. The model is trained using
 ### Unsupervised Learning Example
 Customer segmentation is an example of unsupervised learning. A company provides customer purchase data without labels. The algorithm groups customers based on similar buying behavior, helping businesses understand customer types without predefined categories.
 
----
 
 ## 3. Overfitting: Causes and Prevention
 
@@ -48,7 +46,6 @@ Overfitting occurs when a machine learning model learns the training data too we
 - Use cross-validation techniques
 - Stop training early (early stopping)
 
----
 
 ## 4. Training Data and Test Data
 
@@ -62,7 +59,6 @@ A common split ratio is 80% for training and 20% for testing.
 ### Why Data Splitting is Necessary
 Testing a model on unseen data helps measure how well it generalizes to real-world situations. Without data splitting, it would be impossible to know whether the model truly learned useful patterns or simply memorized the training data.
 
----
 
 ## 5. Case Study: Machine Learning in Healthcare
 
@@ -78,7 +74,6 @@ Researchers have applied machine learning techniques to detect breast cancer usi
 ### Impact
 Machine learning improved early cancer detection, reduced diagnostic errors, and enhanced clinical decision-making.
 
----
 
 ## References
 

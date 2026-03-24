@@ -1,0 +1,53 @@
+Research Paper: Titanic – Machine Learning from Disaster (Simulated Dataset)
+1. Title & Collection Method
+Title:
+Titanic – Machine Learning from Disaster (Passenger Survival Dataset)
+Collection Method:
+This dataset was manually created by simulating Titanic passenger records based on historical knowledge of the Titanic disaster.
+Each row represents a passenger, and features include passenger class, gender, age group, family size, fare category, and port of embarkation.
+Some entries intentionally include missing values, typos, and class imbalance to simulate real-world conditions for ML preprocessing practice.
+________________________________________
+2. Description of Features & Label
+Features (X):
+1.	Passenger_Class (categorical): First, Second, Third
+2.	Gender (categorical): Male, Female
+3.	Age_Group (categorical): Child, Adult, Elderly
+4.	Family_Size (numeric): Number of family members traveling together
+5.	Fare_Category (categorical): Low, Medium, High
+6.	Embarked_Port (categorical): Southampton, Cherbourg, Queenstown
+Label (y):
+•	Survived (binary): Yes / No
+This is a classification task predicting survival.
+________________________________________
+3. Dataset Structure
+•	Rows: 120 passengers
+•	Columns: 7 (6 features + 1 label)
+Sample Table (10 rows)
+Passenger_Class	Gender	Age_Group	Family_Size	Fare_Category	Embarked_Port	Survived
+First	Female	Adult	1	High	Cherbourg	Yes
+Third	Male	Adult	3	Low	Southampton	No
+Second	Female	Child	2	Medium	Queenstown	Yes
+Third	Male	Adult	0	Low	Southampton	No
+First	Male	Elderly	1	High	Cherbourg	No
+Second	Female	Adult	1	Medium	Southampton	Yes
+Third	Female	Adult	4	Low	Queenstown	Yes
+Third	Male	Child	2	Low	Southampton	No
+First	Female	Elderly	0	High	Cherbourg	Yes
+Second	Male	Adult	1	Medium	Southampton	No
+________________________________________
+4. Quality Issues
+•	Missing values: Age_Group or Embarked_Port
+•	Categorical text: Needs encoding (Gender, Class, Port)
+•	Typos: Femle instead of Female
+•	Class imbalance: More passengers did not survive than survived
+•	Mixed formats: Numeric (Family_Size) + categorical (Class, Fare)
+________________________________________
+5. Use Case
+This dataset can be used in ML classification tasks:
+•	Algorithms: Logistic Regression, Decision Tree, Random Forest, SVM
+•	Applications:
+o	Predict passenger survival
+o	Understand important features influencing survival
+o	Practice preprocessing (encoding, handling missing values, scaling)
+________________________________________
+

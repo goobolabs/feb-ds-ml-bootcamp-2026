@@ -1,1 +1,1 @@
-Hi, This is My Personal folder . Everyone is welcomed to view but kindly do not change anything.
+Hi, This is My Personal folder . Everyone is welcome to view but kindly do not change anything.

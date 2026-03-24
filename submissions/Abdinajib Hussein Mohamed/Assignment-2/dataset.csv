@@ -1,0 +1,54 @@
+Age,Marital_Status,Academic_Level,Sleep_Hours,Study_Hours,Screen_Time,Weekly_Attendance,Last_Exam_Result
+20,Single,Semester 3,6 Hours,5 Hours,10-5 hour/day,6 day/week,80-90%
+16,Single,Semester 3,8 Hours,6 Hours,8 Hour/day,5 day/week,70-80%
+22,Single,Semester 3,7 Hours,3 Hours,8-1 Hour/day,6 day/week,80-90%
+22,Single,Semester 3,7 Hours,6 Hours,8 Hour/day,6 day/week,80-90%
+21,Single,Semester 4,8 Hours,13 Hours,8-1 Hour/day,6 day/week,80-90%
+25,Single,Semester 6,7 Hours,6 Hours,8-1 Hour/day,6 day/week,80-90%
+21,Single,Semester 5,5 Hours,4 Hours,5 hour/day,6 day/week,90-100%
+21,Single,Semester 4,6 Hours,5 Hours,8-1 Hour/day,2-3 day/week,70-80%
+22,Single,Semester 7,7 Hours,8 Hours,8 Hour/day,2 day/week,80-90%
+20,Single,Semester 7,6 Hours,3 Hours,8-1 Hour/day,6 day/week,80-90%
+18,Single,Semester 7,7 Hours,5 Hours,Unknown,6 day/week,90-100%
+21,Single,Semester 4,6 Hours,6 Hours,8-1 Hour/day,6 day/week,80-90%
+23,Single,Semester 9,7 Hours,6 Hours,8-1 Hour/day,6 day/week,80-90%
+23,Single,Semester 4,6 Hours,6 Hours,8-1 Hour/day,2-3 day/week,90-100%
+21,Married,Semester 4,5 Hours,4 Hours,8-1 Hour/day,2-3 day/week,70-80%
+22,Single,Semester 7,7 Hours,4 Hours,8-1 Hour/day,6 day/week,80-90%
+27,Single,Bachelor,7 Hours,3 Hours,10-5 hour/day,Completed,80-90%
+21,Single,Semester 4,5 Hours,6 Hours,8-1 Hour/day,6 day/week,90-100%
+19,Single,Semester 3,8 Hours,6 Hours,18-10 hour/day,6 day/week,80-90%
+26,Single,Semester 10,7 Hours,4 Hours,10-5 hour/day,6 day/week,80-90%
+23,Single,Semester 6,8 Hours,5 Hours,8-1 Hour/day,6 day/week,90-100%
+19,Single,Semester 4,6 Hours,6 Hours,8-1 Hour/day,5 day/week,90-100%
+15,Single,School F1,3 Hours,6 Hours,1-2 hours/day,6 day/week,50-60%
+22,Single,Option 4,8 Hours,5 Hours,10-5 hour/day,4 day/week,80-90%
+21,Single,Semester 4,6 Hours,5 Hours,10-5 hour/day,5 day/week,80-90%
+18,Single,Semester 4,6 Hours,0.5 Hours,10-5 hour/day,6 day/week,90-100%
+22,Married,Foundation Year,7 Hours,10 Hours,8 Hour/day,2-3 day/week,70-80%
+22,Single,Semester 8,6 Hours,5 Hours,3 hour/day,5 day/week,70-80%
+21,Single,Semester 4,8 Hours,6 Hours,8-1 Hour/day,6 day/week,90-100%
+21,Single,Semester 7,7 Hours,3 Hours,10-5 hour/day,4 day/week,80-90%
+22,Single,Semester 6,8 Hours,6 Hours,10-5 hour/day,6 day/week,80-90%
+20,Single,Semester 4,3 Hours,6 Hours,8-1 Hour/day,4 day/week,80-90%
+19,Single,Foundation Year,7 Hours,6 Hours,10-5 hour/day,6 day/week,90-100%
+20,Single,Semester 4,5 Hours,6 Hours,8-1 Hour/day,6 day/week,80-90%
+23,Single,Foundation Year,3 Hours,6 Hours,20-18 hour/day,6 day/week,90-100%
+21,Single,Graduate,6 Hours,6 Hours,10-5 hour/day,Always attend,Not Available
+19,Single,Semester 7,6 Hours,10 Hours,3 hour/day,5 day/week,90-100%
+17,Single,F3,6 Hours,6 Hours,18-10 hour/day,6 day/week,80-90%
+23,Single,Semester 5,7 Hours,5 Hours,8-1 Hour/day,5 day/week,80-90%
+23,Single,Semester 4,6 Hours,5 Hours,8-1 Hour/day,4 day/week,70-80%
+20,Single,Semester 4,6 Hours,5 Hours,8-1 Hour/day,5 day/week,80-90%
+18,Single,Semester 3,8 Hours,6 Hours,8 Hour/day,6 day/week,80-90%
+20,Single,Foundation Year,8 Hours,6 Hours,8-1 Hour/day,5 day/week,90-100%
+19,Single,Semester 5,7 Hours,4 Hours,10-5 hour/day,5 day/week,80-90%
+18,Single,Foundation Year,8 Hours,6 Hours,10-5 hour/day,2-3 day/week,90-100%
+20,Single,Semester 8,7 Hours,6 Hours,18-10 hour/day,5 day/week,90-100%
+20,Single,Semester 4,6 Hours,8 Hours,8 Hour/day,5 day/week,90-100%
+22,Single,Semester 7,6 Hours,6 Hours,10-5 hour/day,6 day/week,90-100%
+24,Married,Semester 7,6 Hours,5 Hours,18-10 hour/day,5 day/week,70-80%
+20,Single,Semester 6,4 Hours,5 Hours,18-10 hour/day,2-3 day/week,80-90%
+19,Single,Semester 5,5 Hours,4 Hours,8-1 Hour/day,6 day/week,90-100%
+20,Single,Semester 3,7 Hours,3 Hours,8-1 Hour/day,6 day/week,80-90%
+22,Single,Semester 8,7 Hours,2 Hours,2 hour/day,6 day/week,90-100%

@@ -1,0 +1,45 @@
+A Dataset on Smartphone Usage and Daily Fatigue
+1. Introduction
+Data collection is a fundamental step in any Machine Learning project. In real-world applications, data is often collected manually and may contain imperfections such as missing values or inconsistencies. This research paper presents a self-collected dataset focused on smartphone usage, social media activity, sleep duration, and daily fatigue. The dataset was designed to support practical learning in data preprocessing and Machine Learning foundations.
+2. Data Collection Method
+The dataset was collected using a simple survey method. Individuals were asked to report their age, gender, average daily smartphone usage, social media usage time, average sleep duration, and whether they frequently feel tired during the day. Data was collected manually from people in the local community. No pre-existing datasets were used, ensuring originality and compliance with assignment requirements.
+3. Features and Label Description
+The dataset contains six variables:
+Age: Age of the participant in years
+Gender: Gender of the participant
+Phone_Hours: Average number of hours spent on a smartphone per day
+Social_Media_Hours: Daily time spent on social media platforms
+Sleep_Hours: Average number of hours slept per night
+Feeling_Tired: Indicates whether the participant feels tired during the day (Yes/No)
+The target label (y) is Feeling_Tired, while the remaining variables serve as input features (X).
+4. Dataset Structure
+The dataset consists of 50 samples (rows) and 6 columns. It includes both numerical and categorical data types. A sample of the dataset is shown below:
+
+| Age | Gender | Phone_Hours | Social_Media_Hours | Sleep_Hours | Feeling_Tired |
+|-----|--------|-------------|--------------------|-------------|---------------|
+| 22  | Female | 6           | 3                  | 5           | Yes           |
+| 30  | M      | 4           |                    | 7           | No            |
+| 19  | fem    | 8           | 5                  | 4           | yes           |
+| 27  | Male   | 5           | 2                  |             | No            |
+| 35  | Female | 3           | 1                  | 8           | N             |
+| 22  | Female | 6           | 3                  | 5           | Yes           |
+
+5. Data Quality Issues
+Because the data was collected manually, several quality issues are present:
+Possible missing or inaccurate values due to self-reporting
+Categorical inconsistencies (e.g., gender formatting)
+Class imbalance between tired and non-tired individuals
+Noise caused by personal estimation of usage hours
+These issues make the dataset suitable for practicing data cleaning and preprocessing techniques.
+6. Machine Learning Use Case
+The dataset can be used for various Machine Learning tasks:
+Classification: Predict whether a person feels tired based on phone usage and sleep habits.
+Regression: Estimate sleep hours from smartphone and social media usage.
+Clustering: Identify user behavior patterns related to phone usage and fatigue.
+Such use cases are relevant in health analytics and behavioral studies.
+7. Conclusion
+This paper presented an original, self-collected dataset designed for learning data preprocessing and Machine Learning fundamentals. The dataset reflects real-world challenges and provides a practical foundation for further analysis and modeling.
+References
+1.Géron, A. (2019). Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow.
+2.Provost, F., & Fawcett, T. (2013). Data Science for Business.
+3.Bishop, C. M. (2006). Pattern Recognition and Machine Learning.

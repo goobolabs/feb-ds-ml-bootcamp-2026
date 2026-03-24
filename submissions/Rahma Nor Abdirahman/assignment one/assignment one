@@ -1,0 +1,58 @@
+Research Assignment: Introduction to Machine Learning
+
+
+## 1. Definition of Machine Learning (with a Real-Life Example)
+
+Machine Learning (ML) is a branch of artificial intelligence that enables computer systems to learn from data and improve their performance on a task without being explicitly programmed. Instead of following fixed rules, machine learning models identify patterns from data and use those patterns to make predictions or decisions.
+
+**Real-life example:**
+Email spam filtering is a common application of machine learning. The system is trained using emails labeled as spam or non-spam. By analyzing patterns such as keywords, sender information, and message structure, the model learns to classify new incoming emails accurately.
+
+---
+
+## 2. Comparison Between Supervised and Unsupervised Learning
+
+**Supervised Learning** uses labeled data, meaning each input has a corresponding correct output. The goal is to learn a mapping between inputs and outputs to make predictions on new data.
+*Example:* Predicting house prices using features like size, location, and number of rooms with known prices.
+
+**Unsupervised Learning** uses unlabeled data and aims to discover hidden patterns or structures in the data without predefined outcomes.
+*Example:* Customer segmentation, where customers are grouped based on purchasing behavior without prior labels.
+
+---
+
+## 3. Causes of Overfitting and Prevention
+
+Overfitting occurs when a machine learning model performs very well on training data but poorly on new, unseen data. This happens because the model learns noise and irrelevant details instead of general patterns.
+
+**Causes of Overfitting:**
+
+* Using overly complex models
+* Small or insufficient datasets
+* Noisy or irrelevant features
+* Training the model for too long
+
+**Prevention Methods:**
+
+* Increasing training data
+* Applying regularization techniques
+* Using simpler models
+* Cross-validation
+* Early stopping
+
+---
+
+## 4. Training Data and Test Data Splitting
+
+Training data is the portion of the dataset used to teach the model how to recognize patterns. Test data is used to evaluate the model’s performance on unseen data. A common split is 80% training data and 20% test data.
+
+This process is necessary to measure how well the model generalizes to new data and to reduce the risk of overfitting.
+
+---
+
+## 5. Case Study: Machine Learning in Healthcare
+
+Machine learning has been widely applied in healthcare, particularly in disease detection. A well-known case study involves breast cancer diagnosis using machine learning algorithms such as Support Vector Machines and Logistic Regression. These models analyze medical data to classify tumors as benign or malignant.
+
+The study showed that machine learning models achieved high accuracy and supported doctors in making faster and more reliable diagnoses, improving early detection and patient outcomes.
+
+---

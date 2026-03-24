@@ -1,0 +1,2 @@
+# Spam Detection Project
+This project implements Logistic Regression, Random Forest, and Naive Bayes to detect spam messages using TF-IDF vectorization and evaluates performance using Accuracy, Precision, Recall, F1-Score, and Confusion Matrix.

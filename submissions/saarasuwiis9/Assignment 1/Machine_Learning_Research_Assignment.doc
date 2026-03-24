@@ -1,0 +1,42 @@
+Introduction to Machine Learning
+Research Assignment
+
+1. Definition of Machine Learning (with Real‑Life Example)
+Machine Learning (ML) is a field of computer science in which computers learn patterns from data and use those patterns to make predictions or decisions without being explicitly programmed for every situation. Instead of writing fixed rules, developers train algorithms using examples so the system improves automatically as it processes more data.
+
+Real‑life example: Email spam filtering. A machine learning model is trained using thousands of emails labeled as spam or not spam. The system learns patterns such as suspicious phrases or sender behavior. When a new email arrives, the model predicts whether it is spam based on those learned patterns.
+
+2. Comparison: Supervised vs Unsupervised Learning
+Supervised learning uses labeled data, meaning each input example has a correct output. The algorithm learns the relationship between inputs and outputs and applies it to new data. Example: predicting house prices using historical data.
+
+Unsupervised learning works with unlabeled data. The algorithm discovers hidden patterns or groups within the data. Example: customer segmentation in business.
+
+3. Overfitting: Causes and Prevention
+Overfitting occurs when a model learns the training data too closely, including noise and irrelevant details, causing poor performance on new data.
+
+Causes:
+• Model complexity
+• Noisy or poor‑quality data
+• Insufficient training data
+• Data leakage
+
+Prevention methods:
+• Regularization
+• Cross‑validation
+• Simplifying the model
+• Collecting more data
+
+4. Training Data and Test Data Split
+In machine learning, data is divided into training data and test data. Training data is used to train the model, while test data evaluates performance on unseen data.
+
+This process is necessary to measure how well the model generalizes, detect overfitting, and estimate real‑world performance.
+
+5. Case Study: Machine Learning in Healthcare
+Researchers have applied machine learning to detect intracranial hemorrhage using CT scan images. Large datasets of scans were used to train and test the model. The study found high accuracy in detecting hemorrhage and demonstrated that machine learning systems can assist doctors in diagnosis and improve efficiency in hospitals.
+
+References
+1. Mitchell, T. (1997). Machine Learning. McGraw‑Hill.
+2. Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press.
+3. Salehinejad, H. et al. (2021). Intracranial Hemorrhage Detection Study.
+4. Additional scholarly articles and academic textbooks on machine learning fundamentals.
+

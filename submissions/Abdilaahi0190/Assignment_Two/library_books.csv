@@ -1,0 +1,104 @@
+Book Title,Genre,Page Count,Condition,Language,Copies Available,Popularity
+The Great Adventure,Fiction,320,Good,English,3,High
+Advanced Python,Tech,540,New,English,5,High
+World History Vol 1,History,450,Fair,English,2,Low
+Modern Science,Science,280,Good,English,4,High
+Mystery of Nile,Mystery,,Good,Arabic,1,Low
+Coding for Kids,Tech,150,New,English,6,High
+Ancient Rome,History,400,Poor,English,1,Low
+Space Exploration,Science,350,,English,3,High
+Desert Tales,Fiction,200,Fair,Somali,2,Low
+Machine Learning 101,Tech,600,New,English,4,High
+Machine Learning 101,Tech,600,New,English,4,High
+Data Structures,Tech,450,Good,English,2,High
+The Silent Witness,Mystery,290,Good,English,3,Low
+Chemistry Basics,Science,310,Fair,English,5,High
+Somali Poetry,Arts,180,Good,Somali,4,High
+Global Economy,Business,420,Poor,English,1,Low
+Cloud Computing,Tech,500,New,English,7,High
+Art History,Arts,250,Good,English,2,Low
+Digital Marketing,Business,300,Fair,English,3,High
+Python Advanced,Tech,580,New,English,4,High
+The Last Kingdom,Fiction,400,Good,English,2,Low
+Quantum Physics,Science,320,New,English,3,High
+Java Programming,Tech,520,Good,English,5,High
+Organic Chemistry,Science,380,,English,2,Low
+Modern Arts,Arts,220,Poor,English,1,Low
+Modern Arts,Arts,220,Poor,English,1,Low
+Entrepreneurship,Business,340,Good,English,4,High
+Neural Networks,Tech,650,New,English,3,High
+Cyber Security,Tech,480,Good,English,5,High
+Deep Learning,Tech,700,New,English,6,High
+World War II,History,550,Poor,English,2,Low
+Biology Today,Science,300,Good,English,4,High
+The Coding Cat,Fiction,150,New,English,8,High
+Secret Garden,Fiction,280,Good,English,4,Low
+Starry Night,Arts,200,Fair,English,2,Low
+Logic Pro,Tech,350,Good,English,3,High
+Marketing 4.0,Business,290,Good,English,5,High
+C++ Mastery,Tech,,Fair,English,2,High
+Java Scripting,Tech,330,Good,English,4,High
+The Algorithm,Tech,470,New,English,5,High
+Microbiology,Science,320,Good,English,3,Low
+Calculus 1,Science,400,Poor,English,1,Low
+AI Ethics,Tech,250,New,English,3,High
+The Hobbit,Fiction,310,Good,English,6,High
+1984,Fiction,328,Fair,English,4,High
+Brave New World,Fiction,288,Good,English,3,Low
+Animal Farm,Fiction,112,Poor,English,2,High
+The Alchemist,Fiction,208,Good,English,5,High
+Sapiens,History,443,New,English,7,High
+Educated,Biography,352,Good,English,3,High
+Becoming,Biography,448,New,English,5,High
+Steve Jobs,Biography,656,Good,English,4,High
+Lean Startup,Business,296,New,English,6,High
+Zero to One,Business,224,Good,English,4,High
+Atomic Habits,Self-Help,320,New,English,8,High
+Thinking Fast,Self-Help,499,Good,English,3,High
+Grit,Self-Help,352,Fair,English,2,Low
+Moby Dick,Fiction,635,Poor,English,1,Low
+War and Peace,Fiction,1225,Fair,English,2,Low
+Ulysses,Fiction,730,Poor,English,1,Low
+The Odyssey,History,500,Good,English,3,Low
+Dante Inferno,History,400,Fair,English,2,Low
+Algorithms Unleashed,Tech,420,Good,English,4,High
+Web Dev Guide,Tech,380,New,English,6,High
+Game Design,Tech,450,Good,English,3,High
+UX Research,Tech,310,New,English,5,High
+Mobile Apps,Tech,400,Good,English,4,High
+Backend Dev,Tech,550,New,English,5,High
+Frontend Dev,Tech,480,Good,English,6,High
+FullStack Dev,Tech,600,New,English,4,High
+FullStack Dev,Tech,600,New,English,4,High
+Cloud Architect,Tech,520,New,English,3,High
+Azure Cloud,Tech,460,Good,English,4,High
+AWS Guide,Tech,500,New,English,5,High
+Docker Handbook,Tech,350,Good,English,4,High
+Kubernetes,Tech,470,New,English,3,High
+Spark Engine,Tech,420,Good,English,2,High
+Pandas Pro,Tech,380,,English,5,High
+NumPy Guide,Tech,300,Good,English,4,High
+Matplotlib,Tech,280,New,English,3,High
+Keras deep,Tech,350,Good,English,4,High
+PyTorch Dev,Tech,500,New,English,5,High
+SQL Queries,Tech,320,Good,English,6,High
+NoSQL DB,Tech,340,New,English,4,High
+MongoDB Guide,Tech,300,Good,English,3,High
+Postgres Dev,Tech,450,New,English,4,High
+Redis Cache,Tech,,Good,English,5,High
+Linux kernel,Tech,800,Poor,English,1,Low
+Bash Scripts,Tech,250,Good,English,4,High
+Vim Mastery,Tech,180,Good,English,2,Low
+Git Pro,Tech,300,New,,6,High
+JavaScript ES6,Tech,350,Good,English,5,High
+React Hooks,Tech,400,New,English,4,High
+Node.js Pro,Tech,450,Good,English,3,High
+Express.js,Tech,280,New,English,5,High
+Vue.js Guide,Tech,320,Good,English,4,High
+Angular Dev,Tech,500,New,English,3,High
+Flutter Apps,Tech,480,New,English,5,High
+Swift iOS,Tech,420,Good,English,3,High
+Kotlin Android,Tech,460,New,English,4,High
+Go Backend,Tech,380,Good,English,3,High
+Rust Guide,Tech,550,New,English,4,High
+Scala Pro,Tech,480,Good,English,2,Low

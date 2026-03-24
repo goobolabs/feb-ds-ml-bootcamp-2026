@@ -1,0 +1,86 @@
+# Reflection Paper – Spam Detection with Logistic Regression, Random Forest & Naive Bayes
+
+## 1. What I Implemented
+
+In this assignment, I implemented a spam detection system using three machine learning models: Logistic Regression, Random Forest, and Naive Bayes (MultinomialNB). The goal was to classify email messages as either spam (0) or ham (1).
+
+First, I loaded the dataset `mail_l7_dataset.csv`, which contains two columns: Category (target variable) and Message (text data). I handled preprocessing by replacing missing values with empty strings and encoding the labels where spam = 0 and ham = 1.
+
+Next, I split the dataset into training (80%) and testing (20%) sets using stratified sampling to preserve class balance. I transformed the text messages into numerical features using TF-IDF (Term Frequency–Inverse Document Frequency), which converts text into vectors based on word importance.
+
+Then, I trained three models:
+- Logistic Regression
+- Random Forest Classifier
+- Multinomial Naive Bayes
+
+After training, I evaluated each model using Accuracy, Precision, Recall, F1-Score, and Confusion Matrix. Finally, I performed sanity checks using three example messages to compare how each model behaves on new unseen text.
+
+---
+
+## 2. Comparison of Models (Sanity Check Messages)
+
+For the sanity check, I tested the following messages:
+
+1. "Free entry in 2 a weekly competition!"
+2. "I will meet you at the cafe tomorrow"
+3. "Congratulations, you won a free ticket"
+
+The results showed that not all models agreed.
+
+For the first message, which clearly looks like spam, Naive Bayes correctly predicted Spam, while Logistic Regression and Random Forest predicted Ham. This indicates that Naive Bayes was more sensitive to spam-related keywords such as "free" and "competition."
+
+For the second message, all three models correctly predicted Ham, which is expected because the message represents normal conversation.
+
+For the third message, all three models predicted Ham, even though it sounds like spam. This suggests that the models may have been slightly conservative and may not strongly associate phrases like "won a free ticket" with spam unless more strong spam-related words are present.
+
+Overall, Naive Bayes appeared to give slightly more realistic predictions for clearly spam-like content.
+
+---
+
+## 3. Understanding Naive Bayes
+
+Naive Bayes is a probabilistic classification algorithm based on Bayes’ Theorem. It assumes that features (words in this case) are independent of each other given the class label. Although this assumption is “naive” and not fully realistic, the model performs surprisingly well in text classification tasks.
+
+Naive Bayes is often used in spam detection because:
+- It works very well with high-dimensional text data.
+- It is computationally efficient and fast.
+- It performs well even with relatively small datasets.
+
+Advantages of Naive Bayes:
+- Fast training and prediction.
+- Works well with text and sparse data.
+- Easy to implement and interpret.
+
+Limitations:
+- Assumes independence between words (which is not always true).
+- May perform poorly when features are highly correlated.
+- Can be sensitive to rare words.
+
+---
+
+## 4. Metrics Discussion
+
+When comparing the evaluation metrics (Accuracy, Precision, Recall, F1-Score), Logistic Regression and Random Forest performed similarly, while Naive Bayes had slightly different behavior.
+
+The Confusion Matrix helped me understand model errors, especially:
+- False Positives: Ham predicted as Spam.
+- False Negatives: Spam predicted as Ham.
+
+In spam detection, false negatives are particularly important because they allow spam messages to pass through as legitimate messages. From the confusion matrix and sanity checks, the models made some false negative errors, meaning some spam messages were classified as ham.
+
+Precision tells us how accurate the spam predictions are.
+Recall tells us how many actual spam messages were correctly detected.
+F1-Score balances precision and recall.
+Accuracy shows overall performance but may not reflect class imbalance fully.
+
+---
+
+## 5. My Findings and Recommendation
+
+Based on the results, all three models performed well overall. However, Naive Bayes showed strong sensitivity to spam-related keywords and provided realistic predictions for clearly spam-like messages. Logistic Regression also performed strongly and provided stable and consistent results.
+
+Random Forest worked, but it is generally not the best choice for high-dimensional sparse text data compared to linear models or Naive Bayes.
+
+If I were to recommend one model for spam detection, I would choose Logistic Regression for its balanced performance and stability, or Naive Bayes for its speed and strong performance in text classification tasks.
+
+Overall, this assignment helped me understand how different machine learning models behave in text classification problems and how evaluation metrics and confusion matrices provide deeper insight beyond just accuracy.

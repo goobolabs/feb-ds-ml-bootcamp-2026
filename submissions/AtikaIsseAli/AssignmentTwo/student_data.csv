@@ -1,0 +1,9 @@
+Age,Gender,Study_Hours,Internet_Access,Sleep_Hours,Attendance_Rate,GPA
+20,Male,5,Yes,7,90,3.5
+21,Female,4,Yes,6,85,3.2
+22,Male,6,No,5,70,3.8
+19,Female,3,Yes,8,95,3.0
+23,Male,2,Yes,7,60,2.5
+20,Female,5,Yes,6,88,3.6
+21,Male,4,No,5,NULL,3.1
+22,Female,7,Yes,NULL,92,3.9

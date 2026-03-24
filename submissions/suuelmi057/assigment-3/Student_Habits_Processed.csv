@@ -1,0 +1,85 @@
+# ===============================
+# Assignment 3: Student Habits Data Processing
+# ===============================
+
+# 1️⃣ Import Libraries
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+import os
+
+# 2️⃣ Paths
+input_csv = "C:/Users/hp/Desktop/ml learning/ds-ml-bootcamp/submissions/suuelmi057/assigment-2/Student_Habits_and_Academic_Success.csv"
+output_folder = "C:/Users/hp/Desktop/ml learning/ds-ml-bootcamp/submissions/suuelmi057/assigment-3/"
+output_csv = os.path.join(output_folder, "Student_Habits_Processed.csv")
+
+# 3️⃣ Create assignment-3 folder if it doesn't exist
+os.makedirs(output_folder, exist_ok=True)
+
+# 4️⃣ Load CSV
+df = pd.read_csv(input_csv)
+
+# 5️⃣ Initial Check
+print("First 5 rows:\n", df.head())
+print("\nData info:\n")
+print(df.info())
+print("\nMissing values:\n", df.isna().sum())
+
+# ===============================
+# 6️⃣ Data Cleaning
+# ===============================
+
+# Fix typos in 'Major'
+df['Major'] = df['Major'].replace({'Engineeing': 'Engineering', 'C_application': 'C_Application'})
+
+# Convert words like 'six' to numbers in 'Coffee_Cups'
+df['Coffee_Cups'] = df['Coffee_Cups'].replace({'six': 6})
+df['Coffee_Cups'] = pd.to_numeric(df['Coffee_Cups'], errors='coerce')
+
+# Handle missing values
+df['Sleep_Hrs'] = pd.to_numeric(df['Sleep_Hrs'], errors='coerce')
+df['Sleep_Hrs'].fillna(df['Sleep_Hrs'].median(), inplace=True)
+
+df['Grade'] = pd.to_numeric(df['Grade'], errors='coerce')
+df['Grade'].fillna(df['Grade'].median(), inplace=True)
+
+# Handle outliers (Coffee_Cups > 10 capped at 10)
+df['Coffee_Cups'] = df['Coffee_Cups'].apply(lambda x: 10 if x > 10 else x)
+
+# ===============================
+# 7️⃣ Feature Engineering
+# ===============================
+
+# Sleep Category
+def sleep_category(hours):
+    if hours < 5:
+        return "Low"
+    elif 5 <= hours <= 7:
+        return "Medium"
+    else:
+        return "High"
+
+df['Sleep_Category'] = df['Sleep_Hrs'].apply(sleep_category)
+
+# Coffee per Study Hour
+df['Coffee_per_StudyHr'] = df['Coffee_Cups'] / df['Study_Hrs']
+
+# One-Hot Encode Sleep_Category
+df = pd.get_dummies(df, columns=['Sleep_Category'], drop_first=True)
+
+# Scale numeric features
+scaler = StandardScaler()
+numeric_cols = ['Sleep_Hrs', 'Coffee_Cups', 'Study_Hrs', 'Coffee_per_StudyHr']
+df[numeric_cols] = scaler.fit_transform(df[numeric_cols])
+
+# ===============================
+# 8️⃣ Final Check
+# ===============================
+print("\nProcessed Data (first 10 rows):\n", df.head(10))
+print("\nData description:\n", df.describe())
+
+# ===============================
+# 9️⃣ Save Processed CSV
+# ===============================
+df.to_csv(output_csv, index=False)
+print(f"\nProcessed CSV saved as '{output_csv}'")
