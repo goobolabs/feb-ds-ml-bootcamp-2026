@@ -88,6 +88,9 @@ print("Random Forest Prediction:", round(rf_prediction,2))
 print("Model trained successfully")
 
 
+print("new feature added")
+
+
 
 
 
