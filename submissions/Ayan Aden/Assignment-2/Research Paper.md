@@ -61,6 +61,6 @@ Help stores estimate pricing for new furniture products
 
 **Classification:**
 
-* Predict Popularity_Rating (1–5) based on product features
+*  Predict Popularity_Rating (1–5) based on product features
 
 Determine which furniture products are likely to be popular

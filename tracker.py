@@ -15,17 +15,18 @@ def track_assignments(base_dir):
         print(f"Error: Submissions directory not found at {submissions_dir}")
         return
 
+    # Configuration for assignments and projects
+    assignment_configs = [
+        {"id": "A1", "regex": re.compile(r"(a1|research|lesson[-_ ]*one)|(assig[n]*m[er]*nt|asig[n]*ment)([-_ ]*(1|one))?$", re.IGNORECASE)},
+        {"id": "A2", "regex": re.compile(r"(a2|project|lesson[-_ ]*two)|(assig[n]*m[er]*nt|asig[n]*ment)[-_ ]*(2|two)", re.IGNORECASE)},
+        {"id": "A3", "regex": re.compile(r"(a3|lesson[-_ ]*three)|(assig[n]*m[er]*nt|asig[n]*ment)[-_ ]*(3|three)", re.IGNORECASE)},
+        {"id": "A4", "regex": re.compile(r"(a4|lesson[-_ ]*four)|(assig[n]*m[er]*nt|asig[n]*ment)[-_ ]*(4|four)", re.IGNORECASE)},
+        {"id": "A5", "regex": re.compile(r"(a5|lesson[-_ ]*five)|(assig[n]*m[er]*nt|asig[n]*ment)[-_ ]*(5|five)", re.IGNORECASE)},
+        {"id": "A6", "regex": re.compile(r"(a6|lesson[-_ ]*six)|(assig[n]*m[er]*nt|asig[n]*ment)[-_ ]*(6|six)", re.IGNORECASE)},
+        {"id": "Final", "regex": re.compile(r"(final[-_ ]*project|capstone|final[-_ ]*assignment)", re.IGNORECASE)},
+    ]
+
     students = {}
-    
-    # Stricter regex patterns
-    a1_regex = re.compile(r"^(assig[n]*m[er]*nt|asig[n]*ment|a1|research|lesson[-_ ]*one)[-_ ]*(1|one|one\.md)?$", re.IGNORECASE)
-    a2_regex = re.compile(r"^(assig[n]*m[er]*nt|asig[n]*ment|a2|project|lesson[-_ ]*two)[-_ ]*(2|two)?$", re.IGNORECASE)
-    a3_regex = re.compile(r"^(assig[n]*m[er]*nt|asig[n]*ment|a3|lesson[-_ ]*three)[-_ ]*(3|three)?$", re.IGNORECASE)
-
-    sub_a1_regex = re.compile(r"(assig[n]*m[er]*nt|asig[n]*ment)[-_ ]*(1|one)", re.IGNORECASE)
-    sub_a2_regex = re.compile(r"(assig[n]*m[er]*nt|asig[n]*ment)[-_ ]*(2|two)", re.IGNORECASE)
-    sub_a3_regex = re.compile(r"(assig[n]*m[er]*nt|asig[n]*ment)[-_ ]*(3|three)", re.IGNORECASE)
-
     exclude_folders = {"000.example", ".git", "assignment-1", "assignment-2", "assignment-3"}
 
     # Get all possible students (all folders in submissions excluding noise)
@@ -34,84 +35,79 @@ def track_assignments(base_dir):
     for student_name in all_folders:
         item_path = os.path.join(submissions_dir, student_name)
         
-        students[student_name] = {
-            "A1": {"status": False, "evidence": "", "date": "N/A"}, 
-            "A2": {"status": False, "evidence": "", "date": "N/A"}, 
-            "A3": {"status": False, "evidence": "", "date": "N/A"}
-        }
+        students[student_name] = {cfg["id"]: {"status": False, "evidence": "", "date": "N/A"} for cfg in assignment_configs}
         
         for root, dirs, files in os.walk(item_path):
             depth = root[len(item_path):].count(os.sep)
             if depth > 2:
                 continue
             
-            # Check directory names
-            for d in dirs:
-                d_path = os.path.join(root, d)
-                if a1_regex.match(d) or sub_a1_regex.search(d):
-                    if not students[student_name]["A1"]["status"]:
-                        students[student_name]["A1"] = {"status": True, "evidence": d, "date": get_last_modified(d_path)}
-                if a2_regex.match(d) or sub_a2_regex.search(d):
-                    if not students[student_name]["A2"]["status"]:
-                        students[student_name]["A2"] = {"status": True, "evidence": d, "date": get_last_modified(d_path)}
-                if a3_regex.match(d) or sub_a3_regex.search(d):
-                    if not students[student_name]["A3"]["status"]:
-                        students[student_name]["A3"] = {"status": True, "evidence": d, "date": get_last_modified(d_path)}
+            # Check directory names and filenames
+            items_to_check = [(d, os.path.join(root, d)) for d in dirs] + [(f, os.path.join(root, f)) for f in files]
             
-            # Check filenames
-            for f in files:
-                f_path = os.path.join(root, f)
-                cleanup_name = f.lower()
+            for name, path in items_to_check:
+                cleanup_name = name.lower()
                 if "readme" in cleanup_name or cleanup_name.startswith("."):
                     continue
-                    
-                if sub_a1_regex.search(f):
-                    if not students[student_name]["A1"]["status"]:
-                        students[student_name]["A1"] = {"status": True, "evidence": f, "date": get_last_modified(f_path)}
-                if sub_a2_regex.search(f):
-                    if not students[student_name]["A2"]["status"]:
-                        students[student_name]["A2"] = {"status": True, "evidence": f, "date": get_last_modified(f_path)}
-                if sub_a3_regex.search(f):
-                    if not students[student_name]["A3"]["status"]:
-                        students[student_name]["A3"] = {"status": True, "evidence": f, "date": get_last_modified(f_path)}
+                
+                for cfg in assignment_configs:
+                    if cfg["regex"].search(cleanup_name):
+                        if not students[student_name][cfg["id"]]["status"]:
+                            students[student_name][cfg["id"]] = {
+                                "status": True, 
+                                "evidence": name, 
+                                "date": get_last_modified(path)
+                            }
     
-    generate_reports(base_dir, students)
+    generate_reports(base_dir, students, assignment_configs)
 
-def generate_reports(base_dir, students):
+def generate_reports(base_dir, students, assignment_configs):
     # Valid students have at least one submission
     valid_students = {k: v for k, v in students.items() if any(a["status"] for a in v.values())}
     # Missing students have zero submissions
     missing_students = {k: v for k, v in students.items() if not any(a["status"] for a in v.values())}
     
     total_valid = len(valid_students)
-    count_a1 = sum(1 for s in valid_students.values() if s["A1"]["status"])
-    count_a2 = sum(1 for s in valid_students.values() if s["A2"]["status"])
-    count_a3 = sum(1 for s in valid_students.values() if s["A3"]["status"])
+    ids = [cfg["id"] for cfg in assignment_configs]
+    
+    stats = {id: sum(1 for s in valid_students.values() if s[id]["status"]) for id in ids}
     
     # 1. Generate Markdown Report
     md_path = os.path.join(base_dir, "TRACKER.md")
     with open(md_path, "w") as f:
         f.write("# Student Assignment Tracker Report\n\n")
-        f.write(f"**Total Students Found:** {len(students)}\n")
-        f.write(f"**Students with Submissions:** {total_valid}\n")
-        f.write(f"**Students with Zero Submissions:** {len(missing_students)}\n\n")
+        f.write(f"**Last Updated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
         
-        f.write("| Assignment | Submissions |\n")
-        f.write("| --- | --- |\n")
-        f.write(f"| Assignment 1 | {count_a1} |\n")
-        f.write(f"| Assignment 2 | {count_a2} |\n")
-        f.write(f"| Assignment 3 | {count_a3} |\n\n")
+        f.write("## Overview\n")
+        f.write(f"- **Total Students Found:** {len(students)}\n")
+        f.write(f"- **Students with Submissions:** {total_valid} ({total_valid/len(students)*100:.1f}%)\n")
+        f.write(f"- **Students with Zero Submissions:** {len(missing_students)}\n\n")
         
-        f.write("## Detailed Submission List (Evidence & Date)\n\n")
-        f.write("| Student Name | A1 | A1 Date | A2 | A2 Date | A3 | A3 Date |\n")
-        f.write("| --- | --- | --- | --- | --- | --- | --- |\n")
+        f.write("### Assignment Statistics\n")
+        f.write("| Assignment | Submissions | Percentage |\n")
+        f.write("| --- | --- | --- |\n")
+        for id in ids:
+            perc = (stats[id] / total_valid * 100) if total_valid > 0 else 0
+            f.write(f"| {id} | {stats[id]} | {perc:.1f}% |\n")
+        f.write("\n")
+        
+        f.write("## Detailed Submission List\n\n")
+        header = "| Student Name | " + " | ".join(ids) + " |\n"
+        separator = "| --- | " + " | ".join(["---"] * len(ids)) + " |\n"
+        f.write(header)
+        f.write(separator)
         
         for student in sorted(valid_students.keys()):
             s = valid_students[student]
-            a1 = f"✅ ({s['A1']['evidence']})" if s["A1"]["status"] else "❌"
-            a2 = f"✅ ({s['A2']['evidence']})" if s["A2"]["status"] else "❌"
-            a3 = f"✅ ({s['A3']['evidence']})" if s["A3"]["status"] else "❌"
-            f.write(f"| {student} | {a1} | {s['A1']['date']} | {a2} | {s['A2']['date']} | {a3} | {s['A3']['date']} |\n")
+            row = f"| {student} | "
+            statuses = []
+            for id in ids:
+                if s[id]["status"]:
+                    statuses.append(f"✅")
+                else:
+                    statuses.append("❌")
+            row += " | ".join(statuses) + " |\n"
+            f.write(row)
             
         if missing_students:
             f.write("\n## Students with zero submissions\n\n")
@@ -122,15 +118,18 @@ def generate_reports(base_dir, students):
     csv_path = os.path.join(base_dir, "TRACKER.csv")
     with open(csv_path, "w", newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(["Student Name", "A1 Status", "A1 Evidence", "A1 Date", "A2 Status", "A2 Evidence", "A2 Date", "A3 Status", "A3 Evidence", "A3 Date"])
+        csv_header = ["Student Name"]
+        for id in ids:
+            csv_header.extend([f"{id} Status", f"{id} Evidence", f"{id} Date"])
+        writer.writerow(csv_header)
+        
         for student in sorted(students.keys()):
             s = students[student]
-            writer.writerow([
-                student,
-                "Submitted" if s["A1"]["status"] else "Missing", s["A1"]["evidence"], s["A1"]["date"],
-                "Submitted" if s["A2"]["status"] else "Missing", s["A2"]["evidence"], s["A2"]["date"],
-                "Submitted" if s["A3"]["status"] else "Missing", s["A3"]["evidence"], s["A3"]["date"]
-            ])
+            row = [student]
+            for id in ids:
+                status = "Submitted" if s[id]["status"] else "Missing"
+                row.extend([status, s[id]["evidence"], s[id]["date"]])
+            writer.writerow(row)
             
     print(f"Reports generated: {md_path} and {csv_path}")
 
