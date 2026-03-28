@@ -1,6 +1,6 @@
 # Customer Churn Prediction API
 
-A complete machine learning project featuring data synthesis, a scikit-learn training pipeline, a FastAPI prediction server, and a beautiful web interface.
+This project builds a machine learning system to predict customer churn based on customer behavior and service usage data. Two models, Logistic Regression and Random Forest, were trained and evaluated using performance metrics. The best-performing model was selected and deployed as a Flask API, allowing real-time predictions through a web interface.
 
 ## Project Structure
 
