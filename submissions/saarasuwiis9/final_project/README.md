@@ -4,6 +4,7 @@ A complete machine learning project featuring data synthesis, a scikit-learn tra
 
 ## Project Structure
 
+```text
 Customer Churn Prediction API project
 ├── api/
 │   └── app.py                  # FastAPI server providing the /predict endpoint
@@ -22,3 +23,4 @@ Customer Churn Prediction API project
 ├── project_paper.md            # Methodology & architectural document
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Setup instructions (this file)
+```
