@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<html>
+<head>
+    <title>Used Car Price Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1f4037;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16332c;
+        }
+
+        .result {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Car Price Predictor</h2>
+     
+    <label for="brand">Brand</label>
+    <select id="brand">
+        <option>Toyota</option>
+        <option>BMW</option>
+        <option>Ford</option>
+        <option>Hyundai</option>
+        <option>Mercedes</option>
+        <option>Nissan</option>
+        <option>Honda</option>
+        <option>Kia</option>
+        <option>Chevrolet</option>
+        <option>Audi</option>
+    </select>
+
+    <input type="number" id="year" placeholder="Year">
+    <input type="number" id="engine_size" step="0.1" placeholder="Engine Size">
+    <input type="number" id="mileage" placeholder="Mileage">
+    
+    <label for="fuel_type">Fuel type</label>
+    <select id="fuel_type">
+        <option>Petrol</option>
+        <option>Diesel</option>
+        <option>Hybrid</option>
+    </select>
+    
+    <label for="transmission">Transmission</label>
+    <select id="transmission">
+        <option>Manual</option>
+        <option>Automatic</option>
+    </select>
+
+    <input type="number" id="owner_count" placeholder="Owner Count">
+
+    <button onclick="predictPrice()">Predict Price</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+
+async function predictPrice() {
+
+    const resultBox = document.getElementById("result");
+
+    // Show loading message
+    resultBox.innerText = "Predicting price... ";
+
+    try {
+
+        const data = {
+            brand: document.getElementById("brand").value,
+            year: parseInt(document.getElementById("year").value),
+            engine_size: parseFloat(document.getElementById("engine_size").value),
+            mileage: parseInt(document.getElementById("mileage").value),
+            fuel_type: document.getElementById("fuel_type").value,
+            transmission: document.getElementById("transmission").value,
+            owner_count: parseInt(document.getElementById("owner_count").value)
+        };
+
+        const response = await fetch("https://final-project-used-car-price-prediction.onrender.com/predict", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        resultBox.innerText =
+            "Predicted Price: $" + result.predicted_price.toLocaleString();
+
+    } catch (error) {
+
+        resultBox.innerText = "Error getting prediction ";
+        console.error(error);
+
+    }
+}
+</script>
+</body>
+</html>
