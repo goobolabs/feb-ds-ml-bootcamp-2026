@@ -1,0 +1,6 @@
+CustomerID,Age,Income_$,SpendingScore,VisitsPerMonth,OnlinePurchases,Gender,Region,Cluster
+1,28,33,78,14,9,Female,East,2
+2,21,25,87,8,23,Male,North,0
+3,23,24,88,13,10,Male,South,0
+4,24,25,73,16,11,Female,West,1
+5,20,23,88,17,16,Male,West,0
