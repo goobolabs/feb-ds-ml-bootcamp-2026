@@ -59,14 +59,6 @@ You can clone the repo, open Jupyter/VS Code, and follow along while watching ea
 
 ---
 
-## 📅 Final Project Submission
-
-We hope everyone will submit their final projects. You have plenty of time, in shaa Allah, until **27 March**.
-
-Also, students who have not yet submitted previous assignments are encouraged to submit them as soon as possible.
-
----
-
 ## 🙌 Contributors
 
 This bootcamp is proudly hosted by:
