@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cancer Prediction</title>
+</head>
+<body>
+
+    <h2>Cancer Risk Prediction</h2>
+
+    <!-- MODEL SELECTION -->
+    <label>Select Model:</label>
+    <select id="model">
+        <option value="lr">Logistic Regression</option>
+        <option value="rf">Random Forest</option>
+        <option value="xgb">XGBoost</option>
+    </select>
+
+    <br><br>
+
+    <!-- INPUT FIELDS -->
+    <input id="Age" placeholder="Age"><br><br>
+    <input id="Gender" placeholder="Gender (0/1)"><br><br>
+    <input id="Smoking" placeholder="Smoking (0/1)"><br><br>
+    <input id="Alcohol_Use" placeholder="Alcohol Use (0/1)"><br><br>
+    <input id="Obesity" placeholder="Obesity (0/1)"><br><br>
+    <input id="BMI" placeholder="BMI"><br><br>
+
+    <!-- BUTTON -->
+    <button onclick="predict()">Predict</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        async function predict() {
+
+            const model = document.getElementById("model").value;
+
+            const data = {
+                Age: Number(document.getElementById("Age").value),
+                Gender: Number(document.getElementById("Gender").value),
+                Smoking: Number(document.getElementById("Smoking").value),
+                Alcohol_Use: Number(document.getElementById("Alcohol_Use").value),
+                Obesity: Number(document.getElementById("Obesity").value),
+                BMI: Number(document.getElementById("BMI").value),
+
+                // Default values for remaining fields
+                Family_History: 0,
+                Diet_Red_Meat: 0,
+                Diet_Salted_Processed: 0,
+                Fruit_Veg_Intake: 0,
+                Physical_Activity: 0,
+                Air_Pollution: 0,
+                Occupational_Hazards: 0,
+                BRCA_Mutation: 0,
+                H_Pylori_Infection: 0,
+                Calcium_Intake: 0,
+                Physical_Activity_Level: 1
+            };
+
+            const response = await fetch(`http://127.0.0.1:8000/predict?model=${model}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            document.getElementById("result").innerText =
+                "Prediction: " + result.prediction_label +
+                " | Confidence: " + result.confidence;
+        }
+    </script>
+
+</body>
+</html>
